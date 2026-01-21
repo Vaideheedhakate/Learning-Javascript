@@ -16,7 +16,7 @@ function input(e){
         temp.innerHTML = "Temperatur: "+ Math.floor((data.main.temp - 273.15));
     })
     .catch(()=>{
-        descri.innerHTML = (`${city} is not a city.`);
+        alert(`${city} is not a city.`);
         
     });
 }
