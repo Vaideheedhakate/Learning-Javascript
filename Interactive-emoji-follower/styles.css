@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:  'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow: hidden;
+    color: #333;
+}
+
+#app {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#pet-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+#pet {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#pet:hover {
+    transform: scale(1.2);
+    background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+}
+
+#pet-eyes {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.eye {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.eye::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    background: #333;
+    border-radius: 50%;
+}
+
+#pet-mouth {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 10px;
+    border: 2px solid #333;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    transition: all 0.3s ease;
+}
+
+#pet:hover #pet-mouth {
+    border-color: white;
+    transform: translateX(-50%) scale(1.2);
+}
+
+.happy {
+    background: linear-gradient(135deg, #feca57, #ff9ff3) !important;
+}
+
+.clicked {
+    transform: scale(0.9) !important;
+    background: linear-gradient(135deg, #ff9a56, #ffad56) !important;
+}
