@@ -3,3 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.container{
+    border: 2px solid black;
+    height: 55vh;
+    width: 75vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.color-box{
+    height: 40%;
+    width: 150px;
+    border: 2px solid black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#generate{
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    box-shadow: 0 5px 7px rgb(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-in-out;
+}
+#generate:hover{
+    box-shadow: 5px 7px 7px rgb(0, 0, 0, 0.7);
+    transform: scale(1.05);
+}
